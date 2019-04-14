@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://18xx.kelsin.net/schemas/config.schema.json",
+
+  "definitions": {
+    "dimension": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "dimensions": {
+      "type": "object",
+      "properties": {
+        "width": { "$ref": "#/definitions/dimension" },
+        "height": { "$ref": "#/definitions/dimension" }
+      },
+      "required": ["width", "height"]
+    }
+  },
+
+  "type": "object",
+  "properties": {
+    "scheme": { "type": "string" },
+    "paper": { "$ref": "#/definitions/dimensions" },
+    "stock": {
+      "type": "object",
+      "properties": {
+        "cell": { "$ref": "#/definitions/dimensions" },
+        "column": { "$ref": "#/definitions/dimensions" }
+      },
+      "required": ["cell", "column"]
+    },
+    "pagination": {
+      "type": "string",
+      "enum": ["equal", "max"]
+    },
+    "shareLayout": {
+      "type": "string",
+      "enum": ["center", "left"]
+    },
+    "coords": {
+      "type": "string",
+      "enum": ["outside", "inside", "edge", "none"]
+    },
+    "alpha": { "type": "string" },
+    "plainMapHomes": { "type": "boolean" },
+    "plainMapDestinations": { "type": "boolean" }
+  },
+  "required": [
+    "scheme",
+    "paper",
+    "stock",
+    "pagination",
+    "shareLayout",
+    "coords",
+    "alpha",
+    "plainMapHomes",
+    "plainMapDestinations"
+  ]
+}

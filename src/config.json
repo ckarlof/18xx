@@ -1,0 +1,23 @@
+{
+  "scheme": "gmt",
+  "paper": {
+    "width": 800,
+    "height": 1025
+  },
+  "stock": {
+    "cell": {
+      "width": 70,
+      "height": 85
+    },
+    "column": {
+      "width": 70,
+      "height": 375
+    }
+  },
+  "pagination": "equal",
+  "plainMapHomes": false,
+  "plainMapDestinations": false,
+  "shareLayout": "left",
+  "coords": "outside",
+  "alpha": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+}
