@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import Market from "./Market";
 import games from "./data/games";
 
@@ -8,6 +9,7 @@ import Legend from "./Legend";
 
 import GameContext from "./context/GameContext";
 import "./Stock.css";
+import { height, width } from "./market-utils";
 
 class Stock extends React.Component {
   constructor(props) {
@@ -29,10 +31,14 @@ class Stock extends React.Component {
     let match = this.props.match;
     let game = games[match.params.game];
     let stock = game.stock;
+    let cell = this.props.cell;
 
     if (!stock) {
       return null;
     }
+
+    let pageHeight = (height(stock.market) * cell.height) / 100.0;
+    let pageWidth = (width(stock.market) * cell.width) / 100.0;
 
     return (
       <GameContext.Provider value={match.params.game}>
@@ -83,11 +89,15 @@ class Stock extends React.Component {
               horizontal={game.stock.type === "2D" ? false : true}
             />
           </div>
-          <style>{`@media print {@page {size: ${stock.orientation !== "landscape" ? "11in 8.5in" : "8.5in 11in"};}}`}</style>
+          <style>{`@media print {@page {size: ${pageWidth}in ${pageHeight}in;}}`}</style>
         </div>
       </GameContext.Provider>
     );
   }
 }
 
-export default Stock;
+const mapStateToProps = state => ({
+  cell: state.config.stock.cell
+});
+
+export default connect(mapStateToProps)(Stock);

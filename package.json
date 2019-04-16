@@ -34,7 +34,8 @@
     "build": "react-scripts build && yarn print all",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "print": "node ./bin/print.js"
+    "print": "node ./bin/print.js",
+    "b18": "react-scripts build && node ./bin/b18.js"
   },
   "browserslist": [
     ">0.2%",

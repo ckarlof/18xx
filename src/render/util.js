@@ -1,9 +1,14 @@
 const fs = require('fs');
 
-export const setupB18 = game => {
+export const setupB18 = (game, version) => {
   setupGame(game);
   try {
     fs.mkdirSync(`./build/render/${game}/b18`);
+  } catch (err) {
+    if (err.code !== 'EEXIST') throw err;
+  }
+  try {
+    fs.mkdirSync(`./build/render/${game}/b18/${game}-${version}`);
   } catch (err) {
     if (err.code !== 'EEXIST') throw err;
   }

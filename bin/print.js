@@ -1,8 +1,8 @@
-const fs = require('fs');
-const puppeteer = require('puppeteer');
 const R = require('ramda');
 const express = require('express');
+const fs = require('fs');
 const path = require('path');
+const puppeteer = require('puppeteer');
 
 require("@babel/register");
 
@@ -40,7 +40,7 @@ const server = app.listen(9000);
       if (err.code !== 'EEXIST') throw err;
     }
 
-    let items = ['background', 'cards', 'charters', 'map', 'map-paginated', 'market', 'tiles', 'tokens'];
+    let items = ['background', 'cards', 'charters', 'market', 'market-paginated', 'map', 'map-paginated', 'tiles', 'tokens'];
 
     let gameDef = require(`../src/data/games/${game}`).default;
 
@@ -51,31 +51,8 @@ const server = app.listen(9000);
       if(item === "market" && gameDef.stock.paginated === true) item = 'market-paginated';
 
       console.log("Printing " + game + "/" + item);
-      await page.goto(`http://localhost:9000/${game}/${item}`, {waitUntil: 'networkidle2'});
-      await page.pdf({path: `build/render/${game}/${item.replace(/\//g,'-')}.pdf`, scale: 1.0, preferCSSPageSize: true});
-    }
-
-    // Board 18 Output
-    let tileDefs = require('../src/data/tiles').default;
-    let counts = R.compose(
-      R.countBy(R.identity),
-      R.map(R.prop("color")),
-      R.uniq,
-      R.map(id => tileDefs[id] || tileDefs[id.split("|")[0]])
-    )(R.keys(gameDef.tiles));
-    let colors = R.keys(counts);
-
-    for(let j=0;j<colors.length;j++) {
-      let color = colors[j];
-
-      let width = counts[color] * 150;
-      let height = 900;
-
-      console.log("Printing " + game + "/b18-tiles-" + color);
-      await page.goto(`http://localhost:9000/${game}/b18-tiles-${color}`, {waitUntil: 'networkidle2'});
-      await page.setViewport({ width, height });
-      await page.addStyleTag({ content: 'nav {display:none;} footer {display:none;} .LegalNotes {display:none;} .PrintNotes {display:none;}'});
-      await page.screenshot({ path: `build/render/${game}/b18-tiles-${color}.png`, omitBackground: true });
+      await page.goto(`http://localhost:9000/${game}/${item}`, {waitUntil: 'networkidle0'});
+      await page.pdf({path: `build/render/${game}/${item}.pdf`, scale: 1.0, preferCSSPageSize: true});
     }
   }
 

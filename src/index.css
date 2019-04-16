@@ -561,15 +561,16 @@ svg {
   font-size: 0.18in;
 }
 
-.stock {
-  position: relative;
-}
-
 .prices {
   position: relative;
   overflow: hidden;
   page-break-inside: avoid;
   height: 8in;
+}
+
+.stock {
+  position: relative;
+  overflow: auto;
 }
 
 .stock table {

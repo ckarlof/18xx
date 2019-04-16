@@ -1,3 +1,7 @@
+.Market {
+  overflow: auto;
+}
+
 .Market > h2 {
   margin: 0;
   height: calc(0.5in - 1px);
