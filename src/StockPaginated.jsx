@@ -1,11 +1,11 @@
 import React from "react";
+import { connect } from "react-redux";
 import games from "./data/games";
 import util from "./util";
 import Market from "./Market";
 import * as mutil from "./market-utils";
 import * as data from "./data";
 import * as R from "ramda";
-import { Redirect } from "react-router-dom";
 
 import Rounds from "./Rounds";
 import Par from "./Par";
@@ -16,21 +16,16 @@ import "./StockPaginated.css";
 
 const splitPages = data.pagination === "max" ? util.maxPages : util.equalPages;
 
-const StockPaginated = ({ match }) => {
+const StockPaginated = ({ match, paper, cell }) => {
   let game = games[match.params.game];
   let stock = game.stock;
-  let cell = stock.cell || "auto";
 
-  if (cell === "auto") {
-    return <Redirect to={`/${match.params.game}/stock`} />;
-  }
-
-  let totalWidth = 100.0 * (0.26 + cell.width * mutil.width(game.stock.market));
+  let totalWidth = 100.0 * (0.26 + (cell.width / 100.0) * mutil.width(game.stock.market));
   let totalHeight =
-      100.0 * (0.76 + cell.height * mutil.height(game.stock.market));
+      100.0 * (0.76 + (cell.height / 100.0) * mutil.height(game.stock.market));
 
-  let pageWidth = data.paper.width;
-  let pageHeight = data.paper.height;
+  let pageWidth = paper.width;
+  let pageHeight = paper.height;
 
   if (stock.orientation === "landscape") {
     let tmp = pageWidth;
@@ -122,4 +117,9 @@ const StockPaginated = ({ match }) => {
   );
 };
 
-export default StockPaginated;
+const mapStateToProps = state => ({
+  paper: state.config.paper,
+  cell: state.config.stock.cell
+});
+
+export default connect(mapStateToProps)(StockPaginated);

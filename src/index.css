@@ -563,7 +563,6 @@ svg {
 
 .stock {
   position: relative;
-  overflow: auto;
 }
 
 .prices {
@@ -580,8 +579,6 @@ svg {
 .stock td {
   line-height: 0.15in;
   font-size: 0.15in;
-  height: 0.67in;
-  width: 0.6in;
   border: 1px solid black;
   padding: 0.05in;
   box-sizing: border-box;

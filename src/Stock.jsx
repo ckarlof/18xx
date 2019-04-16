@@ -61,7 +61,7 @@ class Stock extends React.Component {
              </React.Fragment>
            )}
         </div>
-        <div className="stock" style={{ height: "100vh" }}>
+        <div className="stock">
           <Market
             {...stock}
             paginated={false}

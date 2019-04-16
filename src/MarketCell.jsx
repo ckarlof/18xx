@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import * as R from "ramda";
 import { market } from "./data";
 import Color from "./data/Color";
@@ -70,8 +71,8 @@ const MarketCell = ({ borders, value, legend, par, colSpan, width, height }) => 
         let style = {
           backgroundColor: color,
           color: labelColor,
-          width: width ? `${width}in` : "auto",
-          height: height ? `${height}in` : "auto",
+          width: width ? `${width / 100.0}in` : "auto",
+          height: height ? `${height / 100.0}in` : "auto",
           fontFamily: market.fontFamily,
           fontWeight: market.fontWeight,
           fontSize: market.fontSize,
@@ -119,4 +120,9 @@ const MarketCell = ({ borders, value, legend, par, colSpan, width, height }) => 
   );
 };
 
-export default MarketCell;
+const mapStateToProps = state => ({
+  width: state.config.stock.cell.width,
+  height: state.config.stock.cell.height
+});
+
+export default connect(mapStateToProps)(MarketCell);
