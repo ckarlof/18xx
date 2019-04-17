@@ -8,7 +8,7 @@ import mergeDeepRight from "ramda/es/mergeDeepRight";
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const enhancer = composeEnhancers(persistState("config", {
   merge: (initial, persisted) => {
-    return mergeDeepRight(initial, persisted);
+    return mergeDeepRight(initial, persisted || {});
   }
 }));
 

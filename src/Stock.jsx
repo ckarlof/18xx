@@ -37,9 +37,12 @@ class Stock extends React.Component {
       return null;
     }
 
-    let pageHeight = (height(stock.market) * cell.height) / 100.0;
-    let pageWidth = (width(stock.market) * cell.width) / 100.0;
+    let rows = height(stock.market);
+    let cols = width(stock.market);
+    let pageHeight = ((rows * (1 + cell.height)) / 100.0) + 1.0;
+    let pageWidth = ((cols * (1 + cell.width)) / 100.0) + 0.5;
 
+    console.log({cell, rows, cols, pageHeight, pageWidth});
     return (
       <GameContext.Provider value={match.params.game}>
         <div className="PrintNotes">

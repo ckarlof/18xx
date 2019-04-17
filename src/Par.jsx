@@ -87,7 +87,10 @@ const ParRow = ({ par, legend }) => {
   }, par.values);
   return (
     <div className="par">
-      <div className="Par__Container">{rows}</div>
+        <h3>Par Values</h3>
+      <div className="Par__Container">
+        {rows}
+      </div>
     </div>
   );
 };

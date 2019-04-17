@@ -27,6 +27,8 @@ app.get('/*', function(req, res) {
 const server = app.listen(9000);
 
 (async () => {
+  if (process.argv[2] === "debug") return;
+
   const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox']});
   const page = await browser.newPage();
 
@@ -40,7 +42,17 @@ const server = app.listen(9000);
       if (err.code !== 'EEXIST') throw err;
     }
 
-    let items = ['background', 'cards', 'charters', 'market', 'market-paginated', 'map', 'map-paginated', 'tiles', 'tokens'];
+    let items = [
+      'background',
+      'cards',
+      'charters',
+      'map',
+      'map-paginated',
+      'market',
+      'market-paginated',
+      'tiles',
+      'tokens'
+    ];
 
     let gameDef = require(`../src/data/games/${game}`).default;
 
@@ -48,10 +60,10 @@ const server = app.listen(9000);
       let item = items[i];
 
       if(item === "map-paginated" && gameDef.info.paginated === false) continue;
-      if(item === "market" && gameDef.stock.paginated === true) item = 'market-paginated';
+      if(item === "market-paginated" && gameDef.stock.paginated === false) continue;
 
       console.log("Printing " + game + "/" + item);
-      await page.goto(`http://localhost:9000/${game}/${item}`, {waitUntil: 'networkidle0'});
+      await page.goto(`http://localhost:9000/${game}/${item}`, {waitUntil: 'networkidle2'});
       await page.pdf({path: `build/render/${game}/${item}.pdf`, scale: 1.0, preferCSSPageSize: true});
     }
   }

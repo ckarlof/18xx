@@ -31,6 +31,7 @@ import StockPaginated from "./StockPaginated";
 import Footer from "./Footer";
 
 import B18Tiles from "./b18/Tiles";
+import B18Tokens from "./b18/Tokens";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -71,6 +72,7 @@ const App = () => (
           <Route path="/:game/tokens" component={Tokens} />
 
           <Route path="/:game/b18-tiles-:color" component={B18Tiles} />
+          <Route path="/:game/b18-tokens" component={B18Tokens} />
         </Switch>
         <svg
           version="1.1"

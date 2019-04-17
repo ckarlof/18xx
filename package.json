@@ -12,6 +12,8 @@
     "@babel/preset-env": "^7.3.1",
     "@babel/register": "^7.0.0",
     "accounting": "^0.4.1",
+    "ajv": "^6.10.0",
+    "archiver": "^3.0.0",
     "node-sass": "^4.11.0",
     "puppeteer": "^1.11.0",
     "ramda": "^0.26.1",
@@ -23,6 +25,7 @@
     "react-scripts": "2.1.3",
     "redux": "^4.0.0",
     "redux-localstorage": "^0.4.1",
+    "sharp": "^0.22.0",
     "source-map-explorer": "^1.6.0",
     "tinycolor2": "^1.4.1",
     "uuid": "^3.3.2"
@@ -35,7 +38,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "print": "node ./bin/print.js",
-    "b18": "react-scripts build && node ./bin/b18.js"
+    "b18": "node ./bin/b18.js",
+    "validate:config": "ajv -s public/schemas/config.schema.json -d src/config.json",
+    "validate": "yarn validate:config"
   },
   "browserslist": [
     ">0.2%",

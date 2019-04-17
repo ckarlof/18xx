@@ -2,13 +2,15 @@ const fs = require('fs');
 
 export const setupB18 = (game, version) => {
   setupGame(game);
+  let id = `${game}-${version}`;
+  let folder = `board18-${id}`;
   try {
-    fs.mkdirSync(`./build/render/${game}/b18`);
+    fs.mkdirSync(`./build/render/${game}/${folder}`);
   } catch (err) {
     if (err.code !== 'EEXIST') throw err;
   }
   try {
-    fs.mkdirSync(`./build/render/${game}/b18/${game}-${version}`);
+    fs.mkdirSync(`./build/render/${game}/${folder}/${id}`);
   } catch (err) {
     if (err.code !== 'EEXIST') throw err;
   }

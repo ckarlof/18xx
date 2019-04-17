@@ -20,9 +20,8 @@ const StockPaginated = ({ match, paper, cell }) => {
   let game = games[match.params.game];
   let stock = game.stock;
 
-  let totalWidth = 100.0 * (0.26 + (cell.width / 100.0) * mutil.width(game.stock.market));
-  let totalHeight =
-      100.0 * (0.76 + (cell.height / 100.0) * mutil.height(game.stock.market));
+  let totalWidth = 100.0 * (0.26 + ((1 + cell.width) / 100.0) * mutil.width(game.stock.market));
+  let totalHeight = 50 + (100.0 * (0.76 + ((1 + cell.height) / 100.0) * mutil.height(game.stock.market)));
 
   let pageWidth = paper.width;
   let pageHeight = paper.height;

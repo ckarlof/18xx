@@ -570,7 +570,7 @@ svg {
 
 .stock {
   position: relative;
-  overflow: auto;
+  margin: 0.25in;
 }
 
 .stock table {
@@ -874,5 +874,13 @@ footer a:hover {
   .LegalNotes,
   .PrintNotes {
     display: none;
+  }
+
+  .map {
+    padding: 0;
+  }
+
+  .stock {
+    margin: 0;
   }
 }

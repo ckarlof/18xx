@@ -47,8 +47,8 @@ const MapSingle = ({ match }) => {
     totalHeight = tmp;
   }
 
-  let printWidth = `${(200 + totalWidth) / 100}in`;
-  let printHeight = `${(150 + totalHeight) / 100}in`;
+  let printWidth = `${(50 + totalWidth) / 100.0}in`;
+  let printHeight = `${(50 + totalHeight) / 100.0}in`;
 
   let variationSelect = null;
   if(Array.isArray(game.map)) {
