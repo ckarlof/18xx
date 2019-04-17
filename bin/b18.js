@@ -64,7 +64,7 @@ const server = app.listen(9000);
       imgLoc: `images/${id}/Map.png`,
       xStart: 33,
       xStep: game.info.orientation === "horizontal" ? 87 : 50,
-      yStart: game.info.orientation === "horizontal" ? -17 : 33,
+      yStart: game.info.orientation === "horizontal" ? -15 : 35,
       yStep: game.info.orientation === "horizontal" ? 50 : 87
     },
     market: {
