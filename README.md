@@ -13,6 +13,12 @@ me know!
 This project was bootstrapped with [Create React
 App](https://github.com/facebookincubator/create-react-app).
 
+## Donation
+
+I've been asked about donation buttons, if you find this software usefull to you
+and would like to donate money towards it's development you can do so via
+[paypal](https://paypal.me/kelsin) or [square cash](https://cash.me/$kelsin).
+
 ## Docker
 
 If you have docker installed (or available) you can run a [public docker
