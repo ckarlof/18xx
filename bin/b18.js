@@ -235,7 +235,7 @@ const server = app.listen(9000);
   let tokenHeight = 30 * ((game.companies || []).length +
                           (game.tokens || []).length);
   await page.goto(`http://localhost:9000/${bname}/b18-tokens`, {waitUntil: 'networkidle2'});
-  await page.setViewport({ width: 90, height: tokenHeight });
+  await page.setViewport({ width: 60, height: tokenHeight });
   await page.screenshot({ path: `build/render/${bname}/${folder}/${id}/Tokens.png`, omitBackground: true });
 
   // Board18 Tiles

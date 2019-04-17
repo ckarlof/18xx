@@ -31,7 +31,6 @@ const Tokens = ({match}) => {
           <Token label={company.abbrev}
                  token={company.token || company.color} />
         </Svg>
-        <BlankToken/>
         <Svg width={30} height={30} viewBox="-26 -26 52 52">
           <Token label={company.abbrev}
                  inverse={true}
@@ -48,7 +47,6 @@ const Tokens = ({match}) => {
           <Svg width={30} height={30} viewBox="-26 -26 52 52">
             <Token icon={extraToken} token="white" />
           </Svg>
-          <BlankToken/>
           <Svg width={30} height={30} viewBox="-26 -26 52 52">
             <Token icon={extraToken} token="black" />
           </Svg>
@@ -60,7 +58,6 @@ const Tokens = ({match}) => {
           <Svg width={30} height={30} viewBox="-26 -26 52 52">
             <Token label={extraToken} token="white" />
           </Svg>
-          <BlankToken/>
           <Svg width={30} height={30} viewBox="-26 -26 52 52">
             <Token label={extraToken} token="black" />
           </Svg>
@@ -72,13 +69,13 @@ const Tokens = ({match}) => {
   return (
     <ColorContext.Provider value="companies">
       <div className="b18"
-           style={{width: `90px`}}>
+           style={{width: `60px`}}>
         <div className="tokens">
           {companyTokenNodes}
           {extraTokenNodes}
         </div>
       </div>
-      <style>{`@media print {@page {size: 90px ${totalHeight}px;}}`}</style>
+      <style>{`@media print {@page {size: 60px ${totalHeight}px;}}`}</style>
     </ColorContext.Provider>
   );
 };
