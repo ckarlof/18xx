@@ -48,6 +48,20 @@ npm install
 # Run the app
 npm start
 ```
+### Printing
+
+Running `yarn build` will build the app and then output pdf's into the
+`build/render` folder for all games.
+
+Running `yarn print <game>` will output the pdf's for only one game. The app
+needs to be built first by running `yarn build:app`.
+
+### Board18
+
+Running `yarn b18 <game> <verison> <author>` will create a board18 game box zip
+file. The app needs to be built first by running `yarn build:app`.
+
+## Developing
 
 ### Adding a game
 
