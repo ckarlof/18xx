@@ -61,6 +61,19 @@ needs to be built first by running `yarn build:app`.
 Running `yarn b18 <game> <verison> <author>` will create a board18 game box zip
 file. The app needs to be built first by running `yarn build:app`.
 
+### Example
+
+``` sh
+# Build the app
+yarn build:app
+
+# Print 1830 PDF's
+yarn print 1830
+
+# Build an 1830 Board18 Game Box
+yarn b18 1830 CGG01 Kelsin
+```
+
 ## Developing
 
 ### Adding a game
