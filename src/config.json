@@ -1,9 +1,23 @@
 {
-  "scheme": "gmt",
+  "alpha": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  "coords": "outside",
+  "font": {
+    "family": "Bitter, serif",
+    "size": "0.15in",
+    "weight": "normal",
+    "market": {
+      "weight": "bold"
+    }
+  },
+  "pagination": "equal",
   "paper": {
     "width": 800,
     "height": 1025
   },
+  "plainMapDestinations": false,
+  "plainMapHomes": false,
+  "scheme": "gmt",
+  "shareLayout": "left",
   "stock": {
     "cell": {
       "width": 70,
@@ -13,11 +27,5 @@
       "width": 70,
       "height": 375
     }
-  },
-  "pagination": "equal",
-  "plainMapHomes": false,
-  "plainMapDestinations": false,
-  "shareLayout": "left",
-  "coords": "outside",
-  "alpha": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  }
 }
