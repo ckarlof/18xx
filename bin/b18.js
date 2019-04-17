@@ -69,9 +69,9 @@ const server = app.listen(9000);
     },
     market: {
       imgLoc: `images/${id}/Market.png`,
-      xStart: 25 + 1 + (Math.floor(config.stock.cell.width / 2.0)),
+      xStart: 25,
       xStep: config.stock.cell.width,
-      yStart: 75 + 1 + (Math.floor(config.stock.cell.height / 2.0)),
+      yStart: 75,
       yStep: config.stock.cell.height
     },
     tray: [],
