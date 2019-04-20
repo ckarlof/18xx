@@ -1,10 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import games from "./data/games";
-import util from "./util";
+import { equalPages, maxPages } from "./util";
 import Market from "./Market";
 import * as mutil from "./market-utils";
-import * as data from "./data";
 import * as R from "ramda";
 
 import Rounds from "./Rounds";
@@ -14,11 +13,10 @@ import Legend from "./Legend";
 import GameContext from "./context/GameContext";
 import "./StockPaginated.css";
 
-const splitPages = data.pagination === "max" ? util.maxPages : util.equalPages;
-
-const StockPaginated = ({ match, paper, cell }) => {
+const StockPaginated = ({ match, cell, pagination, paper }) => {
   let game = games[match.params.game];
   let stock = game.stock;
+  let splitPages = pagination === "max" ? maxPages : equalPages;
 
   let totalWidth = 100.0 * (0.26 + ((1 + cell.width) / 100.0) * mutil.width(game.stock.market));
   let totalHeight = 50 + (100.0 * (0.76 + ((1 + cell.height) / 100.0) * mutil.height(game.stock.market)));
@@ -117,8 +115,9 @@ const StockPaginated = ({ match, paper, cell }) => {
 };
 
 const mapStateToProps = state => ({
-  paper: state.config.paper,
-  cell: state.config.stock.cell
+  cell: state.config.stock.cell,
+  pagination: state.config.pagination,
+  paper: state.config.paper
 });
 
 export default connect(mapStateToProps)(StockPaginated);

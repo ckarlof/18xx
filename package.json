@@ -35,7 +35,7 @@
     "start": "react-scripts start",
     "build:app": "react-scripts build",
     "build": "react-scripts build && yarn print all",
-    "test": "react-scripts test",
+    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!ramda)\"",
     "eject": "react-scripts eject",
     "print": "node ./bin/print.js",
     "b18": "node ./bin/b18.js",

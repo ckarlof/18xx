@@ -48,7 +48,7 @@ const resolveColor = curry((scheme, phase, context, game, name) => {
 const textColor = curry((scheme, phase, game, color) => {
   let text = [resolveColor(scheme, phase, null, game, "white"),
               resolveColor(scheme, phase, null, game, "black")];
-  let tc = tinycolor(color);
+  let tc = tinycolor.default(color);
   return tinycolor.mostReadable(tc, text).toRgbString();
 });
 

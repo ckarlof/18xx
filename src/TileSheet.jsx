@@ -3,7 +3,7 @@ import * as R from "ramda";
 import { paper } from "./data";
 
 import tileDefs from "./data/tiles";
-import util from "./util";
+import { groupsOf } from "./util";
 import Tile from "./Tile";
 import Svg from "./Svg";
 
@@ -61,7 +61,7 @@ const TileSheet = ({ match }) => {
         )}
       </div>
     ),
-    util.groupsOf(perRow, ids)
+    groupsOf(perRow, ids)
   );
 
   return (

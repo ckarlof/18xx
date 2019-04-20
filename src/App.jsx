@@ -22,8 +22,8 @@ import Tokens from "./Tokens";
 import TileSheet from "./TileSheet";
 import TileManifest from "./TileManifest";
 
-import MapPaginated from "./MapPaginated";
-import MapSingle from "./MapSingle";
+import MapPaginated from "./map/MapPaginated";
+import MapSingle from "./map/MapSingle";
 
 import Stock from "./Stock";
 import StockPaginated from "./StockPaginated";

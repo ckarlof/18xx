@@ -12,11 +12,11 @@ import "./b18.scss";
 
 import games from "../data/games";
 
-const BlankToken = () => (
-  <Svg width={30} height={30} viewBox="-26 -26 52 52">
-    <Token label="" token="black" />
-  </Svg>
-);
+// const BlankToken = () => (
+//   <Svg width={30} height={30} viewBox="-26 -26 52 52">
+//     <Token label="" token="black" />
+//   </Svg>
+// );
 
 const Tokens = ({match}) => {
   let game = games[match.params.game];
