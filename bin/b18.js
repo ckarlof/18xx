@@ -1,3 +1,5 @@
+require("@babel/register");
+
 const R = require('ramda');
 const express = require('express');
 const fs = require('fs');
@@ -6,8 +8,7 @@ const puppeteer = require('puppeteer');
 const sharp = require('sharp');
 const archiver = require('archiver');
 
-require("@babel/register");
-
+const { getMapData } = require("../src/map/util");
 const gutil = require('../src/util').default;
 const util = require('../src/render/util');
 const setup = util.setup;
@@ -187,36 +188,9 @@ const server = app.listen(9000);
   const page = await browser.newPage();
   await page.emulateMedia('print');
 
-  // Board18 Map and Stock
-  let hexWidth = game.info.width;
-  let edge = hexWidth * gutil.HEX_RATIO;
-  let halfHexWidth = 0.5 * hexWidth;
-
-  let map = Array.isArray(game.map) ? game.map[0] : game.map;
-  let hexes = map.hexes;
-  if (map.copy !== undefined) {
-    hexes = R.concat(game.map[map.copy].hexes, hexes);
-  }
-  let maxX = gutil.maxMapX(hexes);
-  let maxY = gutil.maxMapY(hexes);
-
-  let totalWidth =
-      ((config.coords === "edge" || config.coords === "outside") ? 100 : 0) +
-      (game.info.extraTotalWidth || 0) +
-      halfHexWidth * (maxX + 1);
-  let totalHeight =
-      ((config.coords === "edge" || config.coords === "outside") ? 100 : 0) +
-      (game.info.extraTotalHeight || 0) +
-      (1.5 * (maxY - 1) * edge + 2 * edge);
-
-  if (game.info.orientation === "horizontal") {
-    let tmp = totalWidth;
-    totalWidth = totalHeight;
-    totalHeight = tmp;
-  }
-
-  let printWidth = Math.ceil(totalWidth);
-  let printHeight = Math.ceil(totalHeight);
+  let mapData = getMapData(game, config.coords);
+  let printWidth = Math.ceil(mapData.totalWidth);
+  let printHeight = Math.ceil(mapData.totalHeight);
 
   console.log(`Printing ${bname}/${folder}/${id}/Map-Original.png`);
   await page.goto(`http://localhost:9000/${bname}/map`, {waitUntil: 'networkidle2'});

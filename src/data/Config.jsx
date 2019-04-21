@@ -3,7 +3,7 @@ import GameContext from "../context/GameContext";
 
 import * as data from "./index";
 import games from "./games";
-import merge from "ramda/es/merge";
+import merge from "ramda/src/merge";
 
 const Config = ({children}) => {
   return (

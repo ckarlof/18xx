@@ -3,7 +3,7 @@ import persistState from "redux-localstorage";
 import rootReducer from "./reducers";
 import config from "../config.json";
 
-import mergeDeepRight from "ramda/es/mergeDeepRight";
+import mergeDeepRight from "ramda/src/mergeDeepRight";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const enhancer = composeEnhancers(persistState("config", {

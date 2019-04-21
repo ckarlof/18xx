@@ -1,17 +1,17 @@
-import append from "ramda/es/append";
-import chain from "ramda/es/chain";
-import compose from "ramda/es/compose";
-import curry from "ramda/es/curry";
-import drop from "ramda/es/drop";
-import find from "ramda/es/find";
-import isEmpty from "ramda/es/isEmpty";
-import join from "ramda/es/join";
-import lte from "ramda/es/lte";
-import map from "ramda/es/map";
-import prepend from "ramda/es/prepend";
-import propOr from "ramda/es/propOr";
-import reverse from "ramda/es/reverse";
-import take from "ramda/es/take";
+import append from "ramda/src/append";
+import chain from "ramda/src/chain";
+import compose from "ramda/src/compose";
+import curry from "ramda/src/curry";
+import drop from "ramda/src/drop";
+import find from "ramda/src/find";
+import isEmpty from "ramda/src/isEmpty";
+import join from "ramda/src/join";
+import lte from "ramda/src/lte";
+import map from "ramda/src/map";
+import prepend from "ramda/src/prepend";
+import propOr from "ramda/src/propOr";
+import reverse from "ramda/src/reverse";
+import take from "ramda/src/take";
 
 export const groupsOf = curry(function group(n, list) {
   return isEmpty(list)

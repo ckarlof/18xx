@@ -3,9 +3,9 @@ import Color from "../data/Color";
 
 import Name from "./Name";
 
-import find from "ramda/es/find";
-import is from "ramda/es/is";
-import propEq from "ramda/es/propEq";
+import find from "ramda/src/find";
+import is from "ramda/src/is";
+import propEq from "ramda/src/propEq";
 import Token from "../Token";
 
 import Config from "../data/Config";

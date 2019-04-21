@@ -10,8 +10,8 @@ import Svg from "./Svg";
 import games from "./data/games";
 import ColorContext from "./context/ColorContext";
 
-import is from "ramda/es/is";
-import propOr from "ramda/es/propOr";
+import is from "ramda/src/is";
+import propOr from "ramda/src/propOr";
 
 const HEX_RATIO = 0.57735;
 const RATIO = 1.0;

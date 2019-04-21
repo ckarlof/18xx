@@ -12,8 +12,8 @@ import { Redirect } from "react-router-dom";
 import VariationSelect from "../nav/VariationSelect";
 import { getMapData } from "./util";
 
-import map from "ramda/es/map";
-import prop from "ramda/es/prop";
+import map from "ramda/src/map";
+import prop from "ramda/src/prop";
 
 import "./MapPaginated.css";
 

@@ -1,9 +1,9 @@
 import React from "react";
 import Color from "../data/Color";
 
-import chain from "ramda/es/chain";
-import concat from "ramda/es/concat";
-import range from "ramda/es/range";
+import chain from "ramda/src/chain";
+import concat from "ramda/src/concat";
+import range from "ramda/src/range";
 
 import { toAlpha } from "./util";
 
@@ -33,21 +33,21 @@ export const Coordinates = ({horizontal, coords, maxX, maxY, hexX, hexY, totalWi
 
   return concat(chain(x => [
     <Coordinate key={`start-row-${x}`}
-                x={hexX(x, 0)}
+                x={horizontal ? hexX(0, x) : hexX(x, 0)}
                 y={coords === "edge" ? topCoord(x) : 25}
                 label={horizontal ? toAlpha(x) : x} />,
     <Coordinate key={`end-row-${x}`}
-                x={hexX(x, 0)}
+                x={horizontal ? hexX(0, x) : hexX(x, 0)}
                 y={coords === "edge" ? bottomCoord(x) : (totalHeight - 25)}
                 label={horizontal ? toAlpha(x) : x} />
   ], range(1, maxX + 1)), chain(y => [
     <Coordinate key={`start-col-${y}`}
                 x={coords === "edge" ? leftCoord(y) : 25}
-                y={hexY(0, y)}
+                y={horizontal ? hexY(y, 0) : hexY(0, y)}
                 label={horizontal ? y : toAlpha(y)} />,
     <Coordinate key={`end-col-${y}`}
                 x={coords === "edge" ? rightCoord(y) : (totalWidth - 25)}
-                y={hexY(0, y)}
+                y={horizontal ? hexY(y, 0) : hexY(0, y)}
                 label={horizontal ? y : toAlpha(y)} />
   ], range(1, maxY + 1)));
 };

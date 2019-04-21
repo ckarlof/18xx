@@ -3,8 +3,8 @@ import React from "react";
 import Svg from "../Svg";
 import Token from "../Token";
 
-import addIndex from "ramda/es/addIndex";
-import map from "ramda/es/map";
+import addIndex from "ramda/src/addIndex";
+import map from "ramda/src/map";
 
 import ColorContext from "../context/ColorContext";
 
