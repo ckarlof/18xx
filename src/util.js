@@ -1,17 +1,32 @@
+import adjust from "ramda/src/adjust";
 import append from "ramda/src/append";
 import chain from "ramda/src/chain";
 import compose from "ramda/src/compose";
 import curry from "ramda/src/curry";
 import drop from "ramda/src/drop";
 import find from "ramda/src/find";
+import fromPairs from "ramda/src/fromPairs";
+import head from "ramda/src/head";
 import isEmpty from "ramda/src/isEmpty";
 import join from "ramda/src/join";
+import juxt from "ramda/src/juxt";
 import lte from "ramda/src/lte";
 import map from "ramda/src/map";
 import prepend from "ramda/src/prepend";
 import propOr from "ramda/src/propOr";
 import reverse from "ramda/src/reverse";
+import tail from "ramda/src/tail";
 import take from "ramda/src/take";
+import toPairs from "ramda/src/toPairs";
+import toUpper from "ramda/src/toUpper";
+
+export const capitalize = compose(
+  join(''),
+  juxt([compose(toUpper, head), tail])
+);
+
+export const mapKeys = curry((fn, obj) =>
+  fromPairs(map(adjust(0, fn), toPairs(obj))));
 
 export const groupsOf = curry(function group(n, list) {
   return isEmpty(list)
