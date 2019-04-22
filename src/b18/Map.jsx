@@ -29,7 +29,7 @@ const B18Map = ({ match, coords }) => {
       <div className="map">
         <Svg width={data.totalWidth} height={data.totalHeight}>
           <Title game={game} variation={variation} />
-          <Map game={game} variation={variation} />
+          <Map game={game} variation={variation} hexWidth={data.hexWidth} />
         </Svg>
         <style>{`@media print {@page {size: ${data.printWidth} ${data.printHeight};}}`}</style>
       </div>

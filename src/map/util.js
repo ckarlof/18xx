@@ -242,6 +242,7 @@ export const getMapData = (game, coords, variation, hexWidth) => {
 
     // Hex width flat to flat
     hexWidth,
+    scale: hexWidth / 150.0,
 
     // Coords choice
     coords,

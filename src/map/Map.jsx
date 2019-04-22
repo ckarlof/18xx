@@ -6,8 +6,8 @@ import Coordinates from "./Coordinates";
 
 import { getMapData, toAlpha, toCoords } from "./util";
 
-const Map = ({ game, coords, variation }) => {
-  let data = getMapData(game, coords, variation);
+const Map = ({ game, coords, variation, hexWidth }) => {
+  let data = getMapData(game, coords, variation, hexWidth);
 
   if (!data.map) {
     return null;
@@ -16,10 +16,11 @@ const Map = ({ game, coords, variation }) => {
   let mapHexes = R.chain(hex => {
     return R.map(([x, y]) => {
       let translate = `translate(${data.hexX(x, y)} ${data.hexY(x, y)})`;
+      let scale = `scale(${data.scale})`;
       let coord = `${toAlpha(y)}${x}`;
       return (
         <g
-          transform={`${translate}`}
+          transform={`${translate} ${scale}`}
           key={`hex-${hex.variation}-${coord}`}
         >
           <Hex hex={hex} border={true} transparent={game.info.transparent}

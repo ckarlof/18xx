@@ -63,9 +63,9 @@ const server = app.listen(9000);
     author,
     board: {
       imgLoc: `images/${id}/Map.png`,
-      xStart: game.info.orientation === "horizontal" ? 33 : 37,
+      xStart: game.info.orientation === "horizontal" ? 47 : 50,
       xStep: game.info.orientation === "horizontal" ? 87 : 50,
-      yStart: game.info.orientation === "horizontal" ? -15 : 33,
+      yStart: game.info.orientation === "horizontal" ? 0 : 47,
       yStep: game.info.orientation === "horizontal" ? 50 : 87
     },
     market: {
@@ -188,14 +188,14 @@ const server = app.listen(9000);
   const page = await browser.newPage();
   await page.emulateMedia('print');
 
-  let mapData = getMapData(game, config.coords);
+  let mapData = getMapData(game, config.coords, 0, 100);
   let printWidth = Math.ceil(mapData.totalWidth);
   let printHeight = Math.ceil(mapData.totalHeight);
 
-  console.log(`Printing ${bname}/${folder}/${id}/Map-Original.png`);
-  await page.goto(`http://localhost:9000/${bname}/map`, {waitUntil: 'networkidle2'});
+  console.log(`Printing ${bname}/${folder}/${id}/Map.png`);
+  await page.goto(`http://localhost:9000/${bname}/b18-map`, {waitUntil: 'networkidle2'});
   await page.setViewport({ width: printWidth, height: printHeight });
-  await page.screenshot({ path: `build/render/${bname}/${folder}/${id}/Map-Original.png`});
+  await page.screenshot({ path: `build/render/${bname}/${folder}/${id}/Map.png`});
 
   console.log(`Printing ${bname}/${folder}/${id}/Market.png`);
   let marketWidth = (config.stock.cell.width + 1) * mutil.width(game.stock.market);
@@ -231,16 +231,7 @@ const server = app.listen(9000);
   console.log(`Writing  ${bname}/${folder}/${id}.json`);
   fs.writeFileSync(`build/render/${bname}/${folder}/${id}.json`, JSON.stringify(json, null, 2));
 
-  console.log(`Resizing ${bname}/${folder}/${id}/Map.png`);
-  await sharp(`build/render/${bname}/${folder}/${id}/Map-Original.png`)
-    .resize(Math.floor(printWidth * 0.67))
-    .toFile(`build/render/${bname}/${folder}/${id}/Map.png`);
-  fs.unlinkSync(`build/render/${bname}/${folder}/${id}/Map-Original.png`);
-
   console.log(`Creating ${bname}/${folder}.zip`);
-  // let zip = new AdmZip();
-  // zip.addLocalFolder(`build/render/${bname}/${folder}`, `${folder}`);
-  // zip.writeZip(`build/render/${bname}/${folder}.zip`);
 
   const output = fs.createWriteStream(`build/render/${bname}/${folder}.zip`);
   const archive = archiver('zip', {
