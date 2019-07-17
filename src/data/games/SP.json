@@ -1,0 +1,117 @@
+{
+  "info": {
+    "title": "Southern Pacific",
+    "designer": "Harry Wu",
+    "background": "green",
+    "currency": "USD"
+  },
+  "links": {
+    "bgg": "https://boardgamegeek.com/boardgame/253319/southern-pacific"
+  },
+  "tokens": [],
+  "companies": [
+    {
+      "name": "Southern Pacific Railroad",
+      "abbrev": "SP",
+      "color": "yellow",
+      "shares": [
+        {
+          "quantity": 1,
+          "label": "President's Certificate",
+          "shares": 1
+        },
+        {
+          "quantity": 4,
+          "shares": 1
+        }
+      ]
+    },
+    {
+      "name": "Missouri Kansas Texas Railroad",
+      "abbrev": "MKT",
+      "color": "blue",
+      "shares": [
+        {
+          "quantity": 1,
+          "label": "President's Certificate",
+          "shares": 1
+        },
+        {
+          "quantity": 4,
+          "shares": 1
+        }
+      ]
+    },
+    {
+      "name": "Missouri Pacific Railroad",
+      "abbrev": "MP",
+      "color": "green",
+      "shares": [
+        {
+          "quantity": 1,
+          "label": "President's Certificate",
+          "shares": 1
+        },
+        {
+          "quantity": 4,
+          "shares": 1
+        }
+      ]
+    },
+    {
+      "name": "Texas & Pacific Railway",
+      "abbrev": "TP",
+      "color": "black",
+      "shares": [
+        {
+          "quantity": 1,
+          "label": "President's Certificate",
+          "shares": 1
+        },
+        {
+          "quantity": 4,
+          "shares": 1
+        }
+      ]
+    },
+    {
+      "name": "St. Louis-San Francisco Railway",
+      "abbrev": "SLSF",
+      "color": "purple",
+      "shares": [
+        {
+          "quantity": 1,
+          "label": "President's Certificate",
+          "shares": 1
+        },
+        {
+          "quantity": 4,
+          "shares": 1
+        }
+      ]
+    },
+    {
+      "name": "Galveston, Houston & Henderson Railroad",
+      "abbrev": "GHH",
+      "color": "red",
+      "shares": [
+        {
+          "quantity": 1,
+          "label": "President's Certificate",
+          "shares": 1
+        },
+        {
+          "quantity": 4,
+          "shares": 1
+        }
+      ]
+    }
+
+  ],
+  "privates": [
+    {
+      "name": "Bull Market Card",
+      "description": ""
+    }
+  ]
+}
