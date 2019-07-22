@@ -1,0 +1,82 @@
+{
+  "info": {
+    "title": "Southern African Railroads",
+    "designer": "John Bohrer",
+    "background": "green",
+    "currency": "USD"
+  },
+  "links": {
+    "bgg": "https://boardgamegeek.com/boardgame/97683/south-african-railroads"
+  },
+  "tokens": [],
+  "companies": [
+    {
+      "name": "Caminhos de Ferro Mocambique",
+      "abbrev": "CdFM",
+      "color": "black",
+      "shares": [
+        {
+          "quantity": 5,
+          "shares": 1
+        }
+      ]
+    },
+    {
+      "name": "Central South African Railway",
+      "abbrev": "CSAR",
+      "color": "lime",
+      "shares": [
+        {
+          "quantity": 5,
+          "shares": 1
+        }
+      ]
+    },
+    {
+      "name": "Natal Railway Company",
+      "abbrev": "NRC",
+      "color": "tan",
+      "shares": [
+        {
+          "quantity": 5,
+          "shares": 1
+        }
+      ]
+    },
+    {
+      "name": "Cape Town Railway & Dock Company",
+      "abbrev": "CTR&D",
+      "color": "cyan",
+      "shares": [
+        {
+          "quantity": 5,
+          "shares": 1
+        }
+      ]
+    },
+    {
+      "name": "Cape Midland Railway Company",
+      "abbrev": "CMRC",
+      "color": "red",
+      "shares": [
+        {
+          "quantity": 5,
+          "shares": 1
+        }
+      ]
+    },
+    {
+      "name": "Zuid Afrikaansche Spoorweg Maatskappy",
+      "abbrev": "ZASM",
+      "color": "yellow",
+      "shares": [
+        {
+          "quantity": 5,
+          "shares": 1
+        }
+      ]
+    }
+
+  ],
+  "privates": []
+}
