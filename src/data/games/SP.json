@@ -14,6 +14,7 @@
       "name": "Southern Pacific Railroad",
       "abbrev": "SP",
       "color": "yellow",
+      "tokens": [],
       "shares": [
         {
           "quantity": 1,
@@ -30,6 +31,7 @@
       "name": "Missouri Kansas Texas Railroad",
       "abbrev": "MKT",
       "color": "blue",
+      "tokens": [],
       "shares": [
         {
           "quantity": 1,
@@ -46,6 +48,7 @@
       "name": "Missouri Pacific Railroad",
       "abbrev": "MP",
       "color": "green",
+      "tokens": [],
       "shares": [
         {
           "quantity": 1,
@@ -62,6 +65,7 @@
       "name": "Texas & Pacific Railway",
       "abbrev": "TP",
       "color": "black",
+      "tokens": [],
       "shares": [
         {
           "quantity": 1,
@@ -78,6 +82,7 @@
       "name": "St. Louis-San Francisco Railway",
       "abbrev": "SLSF",
       "color": "purple",
+      "tokens": [],
       "shares": [
         {
           "quantity": 1,
@@ -94,6 +99,7 @@
       "name": "Galveston, Houston & Henderson Railroad",
       "abbrev": "GHH",
       "color": "red",
+      "tokens": [],
       "shares": [
         {
           "quantity": 1,
@@ -108,6 +114,17 @@
     }
 
   ],
+  "map": {
+    "hexes": []
+  },
+  "blankCharters": true,
+  "turns": [],
+  "phases": [],
+  "trains": [],
+  "pools": [],
+  "rounds": [],
+  "players": [],
+  "tokens": [],
   "privates": [
     {
       "name": "Bull Market Card",
