@@ -21,7 +21,9 @@ const LeftShare = ({
   token,
   shareStyle
 }) => {
-  let count = shares > 1 ? `${shares} Shares` : `${shares} Share`;
+  //let count = shares > 1 ? `${shares} Shares` : `${shares} Share`;
+  // For winsome games the count is always singular
+  let count = `${shares} Share`;
 
   let tokens = [];
   let sharesLeft = shares;
