@@ -38,6 +38,7 @@ const Charters = ({ match }) => {
                 tokens={company.tokens}
                 phases={game.minorPhases}
                 turns={game.turns}
+                blankCharters={game.blankCharters}
               />
             );
           } else {
@@ -51,6 +52,7 @@ const Charters = ({ match }) => {
                 tokens={company.tokens}
                 phases={game.phases}
                 turns={game.turns}
+                blankCharters={game.blankCharters}
               />
             );
           }

@@ -9,12 +9,11 @@ import { unitsToCss } from "./util";
 
 import is from "ramda/src/is";
 
-const Charter = ({ name, abbrev, token, tokens, phases, turns, charterStyle, game, halfWidthCharters }) => {
+const Charter = ({ name, abbrev, token, tokens, phases, turns, charterStyle, game, halfWidthCharters, blankCharters }) => {
   let color = token;
   if(is(Object, token)) {
     color = token.colors[0];
   }
-
   let tokenSpots = R.addIndex(R.map)((label, index) => {
     return (
       <svg key={`token-${index}`}>
@@ -86,29 +85,29 @@ const Charter = ({ name, abbrev, token, tokens, phases, turns, charterStyle, gam
             )}
             {false && <div className="charter__game">{game}</div>}
             <div className="charter__tokens">
-              {halfWidthCharters && "Tokens"}
+              {halfWidthCharters && !blankCharters && "Tokens"}
               {tokenSpots}
             </div>
-            {halfWidthCharters && (
+            {halfWidthCharters && !blankCharters && (
               <div className="charter__assets">
                 Assets
                 <dl>{turnNodes}</dl>
               </div>
             )}
-            {halfWidthCharters || (
+            {!blankCharters && (halfWidthCharters || (
               <div className="charter__trains">
                 Trains
                 <div className="charter__phase">
                   <Phase phases={phases} />
                 </div>
               </div>
-            )}
-            {halfWidthCharters || (
+            ))}
+            {!blankCharters && (halfWidthCharters || (
               <div className="charter__treasury">
                 Treasury
                 <dl>{turnNodes}</dl>
               </div>
-            )}
+            ))}
           </div>
         </div>
       )}
