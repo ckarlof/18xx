@@ -29,6 +29,7 @@ import game_18Chesapeake from "./18Chesapeake";
 import game_18Mex from "./18Mex";
 import game_FourthAge from "./FourthAge";
 import game_Harzbahn from "./Harzbahn";
+import game_IG from "./IG";
 import game_SAR from "./SAR";
 import game_SP from "./SP";
 
@@ -64,6 +65,7 @@ let all_games = {
   "18Mex": game_18Mex,
   FourthAge: game_FourthAge,
   Harzbahn: game_Harzbahn,
+  IG: game_IG,
   SAR: game_SAR,
   SP: game_SP
 };

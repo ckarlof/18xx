@@ -1,0 +1,186 @@
+{
+  "info": {
+    "title": "Iberian Gauge",
+    "designer": "Tom Russell",
+    "background": "green",
+    "currency": "USD"
+  },
+  "links": {
+    "bgg": "https://boardgamegeek.com/boardgame/228372/iberian-gauge"
+  },
+  "tokens": [],
+  "companies": [
+    {
+      "name": "Ferrocarril de Sóller",
+      "abbrev": "FS",
+      "color": "red",
+      "tokens": [],
+      "shares": [
+        {
+          "quantity": 1,
+          "label": "1 of 4",
+          "shares": 1
+        },
+        {
+          "quantity": 1,
+          "label": "2 of 4",
+          "shares": 2
+        },
+        {
+          "quantity": 1,
+          "label": "3 of 4",
+          "shares": 3
+        },
+        {
+          "quantity": 1,
+          "label": "4 of 4",
+          "shares": 4
+        }
+      ]
+    },
+    {
+      "name": "Ferrocarril de Madrid a Aranjuez",
+      "abbrev": "FMA",
+      "color": "blue",
+      "tokens": [],
+      "shares": [
+        {
+          "quantity": 1,
+          "label": "1 of 5",
+          "shares": 1
+        },
+        {
+          "quantity": 1,
+          "label": "2 of 5",
+          "shares": 2
+        },
+        {
+          "quantity": 1,
+          "label": "3 of 5",
+          "shares": 3
+        },
+        {
+          "quantity": 1,
+          "label": "4 of 5",
+          "shares": 4
+        },
+        {
+          "quantity": 1,
+          "label": "5 of 5",
+          "shares": 5
+        }
+      ]
+    },
+    {
+      "name": "Ferrocarriles de Cataluña",
+      "abbrev": "FCC",
+      "color": "purple",
+      "tokens": [],
+      "shares": [
+        {
+          "quantity": 1,
+          "label": "1 of 3",
+          "shares": 1
+        },
+        {
+          "quantity": 1,
+          "label": "2 of 3",
+          "shares": 2
+        },
+        {
+          "quantity": 1,
+          "label": "3 of 3",
+          "shares": 3
+        }
+      ]
+    },
+    {
+      "name": "Ferrocarriles de Vía Estrecha",
+      "abbrev": "FEVE",
+      "color": "yellow",
+      "tokens": [],
+      "shares": [
+        {
+          "quantity": 1,
+          "label": "1 of 5",
+          "shares": 1
+        },
+        {
+          "quantity": 1,
+          "label": "2 of 5",
+          "shares": 2
+        },
+        {
+          "quantity": 1,
+          "label": "3 of 5",
+          "shares": 3
+        },
+        {
+          "quantity": 1,
+          "label": "4 of 5",
+          "shares": 4
+        },
+        {
+          "quantity": 1,
+          "label": "5 of 5",
+          "shares": 5
+        }
+      ]
+    },
+    {
+      "name": "Comboios de Portugal",
+      "abbrev": "CP",
+      "color": "green",
+      "tokens": [],
+      "shares": [
+        {
+          "quantity": 1,
+          "label": "1 of 6",
+          "shares": 1
+        },
+        {
+          "quantity": 1,
+          "label": "2 of 6",
+          "shares": 2
+        },
+        {
+          "quantity": 1,
+          "label": "3 of 6",
+          "shares": 3
+        },
+        {
+          "quantity": 1,
+          "label": "4 of 6",
+          "shares": 4
+        },
+        {
+          "quantity": 1,
+          "label": "5 of 6",
+          "shares": 5
+        },
+        {
+          "quantity": 1,
+          "label": "6 of 6",
+          "shares": 6
+        }
+      ]
+    }
+  ],
+  "map": {
+    "hexes": []
+  },
+  "blankCharters": true,
+  "turns": [],
+  "phases": [],
+  "trains": [],
+  "pools": [],
+  "rounds": [],
+  "players": [],
+  "tokens": [],
+  "privates": [
+    {
+      "name": "Priority",
+      "description": ""
+    }
+  ]
+}
