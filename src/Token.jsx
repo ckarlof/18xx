@@ -228,7 +228,7 @@ const Token = ({
                                  x={start} y={start}
                                  height={size} width={size}/>
                     );
-                    tokenFill = c("white");
+                    tokenFill = c(color);//c("white"); Note: needs "Company Logos" to be set to "main"
                     textStroke = "none";
                     textFill = "none";
                   } else {
