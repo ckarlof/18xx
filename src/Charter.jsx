@@ -9,10 +9,14 @@ import { unitsToCss } from "./util";
 
 import is from "ramda/src/is";
 
-const Charter = ({ name, abbrev, token, tokens, phases, turns, charterStyle, game, halfWidthCharters }) => {
+const Charter = ({ name, abbrev, token, tokens, phases, turns, charterStyle, game, halfWidthCharters, minor }) => {
   let color = token;
   if(is(Object, token)) {
     color = token.colors[0];
+  }
+
+  if (minor) {
+    halfWidthCharters = true;
   }
 
   let tokenSpots = R.addIndex(R.map)((label, index) => {
@@ -85,13 +89,13 @@ const Charter = ({ name, abbrev, token, tokens, phases, turns, charterStyle, gam
               </div>
             )}
             {false && <div className="charter__game">{game}</div>}
-            <div className="charter__tokens">
+            {!minor && <div className="charter__tokens">
               {halfWidthCharters && "Tokens"}
               {tokenSpots}
-            </div>
-            {halfWidthCharters && (
-              <div className="charter__assets">
-                Assets
+            </div>}
+            {minor && (
+              <div className="charter__assets" style={{ "border-style": "none", "margin": "0.125in 0.125in 0.25in 0.125in" }}>
+                Treasury
                 <dl>{turnNodes}</dl>
               </div>
             )}

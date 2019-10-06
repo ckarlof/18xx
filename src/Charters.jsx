@@ -28,7 +28,7 @@ const Charters = () => {
           </div>
         </div>
         {R.addIndex(R.chain)((company, index) => {
-          if (company.minor && game.minorPhases) {
+          if (company.minor) {
             return (
               <Charter
                 game={game.info.title}
@@ -39,6 +39,7 @@ const Charters = () => {
                 tokens={company.tokens}
                 phases={game.minorPhases}
                 turns={game.turns}
+                minor={true}
               />
             );
           } else {
