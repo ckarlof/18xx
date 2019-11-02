@@ -28,34 +28,33 @@ const Charters = () => {
           </div>
         </div>
         {R.addIndex(R.chain)((company, index) => {
-          if (company.minor) {
-            return (
-              <Charter
-                game={game.info.title}
-                key={company.abbrev}
-                name={company.name}
-                abbrev={company.abbrev}
-                token={company.token || company.color}
-                tokens={company.tokens}
-                phases={game.minorPhases}
-                turns={game.turns}
-                minor={true}
-              />
-            );
-          } else {
-            return (
-              <Charter
-                game={game.info.title}
-                key={company.abbrev}
-                name={company.name}
-                abbrev={company.abbrev}
-                token={company.token || company.color}
-                tokens={company.tokens}
-                phases={game.phases}
-                turns={game.turns}
-              />
-            );
+          let phases = game.phases;
+          let turns = game.turns;
+          let isMinor = false || company.minor;
+          if (isMinor) {
+            if (game.minorPhases) {
+              phases = game.minorPhases;
+            }
+            if (game.minorTurns) {
+              turns = game.minorTurns;
+            }
           }
+          if (company.info) {
+            turns = (new Array(company.info)).concat(turns);
+          }
+          return (
+            <Charter
+            game={game.info.title}
+            key={company.abbrev}
+            name={company.name}
+            abbrev={company.abbrev}
+            token={company.token || company.color}
+            tokens={company.tokens}
+            phases={phases}
+            turns={turns}
+            minor={isMinor}
+            />
+          );
         }, companies)}
         <PageSetup landscape={false}/>
       </div>
