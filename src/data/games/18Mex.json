@@ -42,7 +42,14 @@
       "tokens": [
       ],
       "color": "green",
-      "minor": true
+      "minor": true,
+      "info": {
+        "name": "",
+        "steps": [
+          "Exchanged for 5% share of NdM in Phase 3.5 (see 5.2)"
+        ],
+        "ordered": false
+      }
     },
     {
       "name": "Sonora-Baja Railway",
@@ -50,7 +57,14 @@
       "tokens": [
       ],
       "color": "green",
-      "minor": true
+      "minor": true,
+      "info": {
+        "name": "",
+        "steps": [
+          "Exchanged for 5% share of NdM in Phase 3.5 (see 5.2)"
+        ],
+        "ordered": false
+      }
     },
     {
       "name": "Southeastern Railway",
@@ -58,7 +72,14 @@
       "tokens": [
       ],
       "color": "purple",
-      "minor": true
+      "minor": true,
+      "info": {
+        "name": "",
+        "steps": [
+          "Exchanged for 10% share of UdY in Phase 3.5 (see 5.2)"
+        ],
+        "ordered": false
+      }
     },
     {
       "name": "Chihuahua Pacific Railway",
@@ -82,7 +103,15 @@
           "percent": 10,
           "shares": 1
         }
-      ]
+      ],
+      "info": {
+        "name": "",
+        "steps": [
+          "Receives mail contract equal to value of home city when it starts an operating round with a train",
+          "Eligible to merge into NdM"
+        ],
+        "ordered": false
+      }
     },
     {
       "name": "National Railways of Mexico",
@@ -120,7 +149,18 @@
           "percent": 10,
           "shares": 1
         }
-      ]
+      ],
+      "info": {
+        "name": "",
+        "steps": [
+          "No additional shares may be purchased until phase 3.5",
+          "Receives mail contract equal to value of home city when it starts an operating round with a train",
+          "Train limit +1 (included in chart to left)",
+          "Two rightmost tokens available only for exchange of merger company's tokens. They become $80 tokens if unused, but are lost if there is no merger."
+        ],
+        "ordered": false
+      }
+
     },
     {
       "name": "Mexican Central Railway",
@@ -142,7 +182,15 @@
           "percent": 10,
           "shares": 1
         }
-      ]
+      ],
+      "info": {
+        "name": "",
+        "steps": [
+          "Receives mail contract equal to value of home city when it starts an operating round with a train",
+          "Eligible to merge into NdM"
+        ],
+        "ordered": false
+      }
     },
     {
       "name": "Pacific Railroad",
@@ -166,7 +214,15 @@
           "percent": 10,
           "shares": 1
         }
-      ]
+      ],
+      "info": {
+        "name": "",
+        "steps": [
+          "Receives mail contract equal to value of home city when it starts an operating round with a train",
+          "Not eligible to merge into NdM"
+        ],
+        "ordered": false
+      }
     },
     {
       "name": "Texas-Mexican Railway",
@@ -188,7 +244,15 @@
           "percent": 10,
           "shares": 1
         }
-      ]
+      ],
+      "info": {
+        "name": "",
+        "steps": [
+          "Receives mail contract equal to value of home city when it starts an operating round with a train",
+          "Not eligible to merge into NdM"
+        ],
+        "ordered": false
+      }
     },
     {
       "name": "Mexican Railway",
@@ -211,7 +275,15 @@
           "percent": 10,
           "shares": 1
         }
-      ]
+      ],
+      "info": {
+        "name": "",
+        "steps": [
+          "Receives mail contract equal to value of home city when it starts an operating round with a train",
+          "Eligible to merge into NdM"
+        ],
+        "ordered": false
+      }
     },
     {
       "name": "Southern Pacific Railroad of Mexico",
@@ -234,7 +306,15 @@
           "percent": 10,
           "shares": 1
         }
-      ]
+      ],
+      "info": {
+        "name": "",
+        "steps": [
+          "Receives mail contract equal to value of home city when it starts an operating round with a train",
+          "Eligible to merge into NdM"
+        ],
+        "ordered": false
+      }
     },
     {
       "name": "United Railways of Yucatan",
@@ -262,7 +342,15 @@
           "percent": 10,
           "shares": 1
         }
-      ]
+      ],
+      "info": {
+        "name": "",
+        "steps": [
+          "Receives mail contract equal to value of home city when it starts an operating round with a train",
+          "Eligible to merge into NdM"
+        ],
+        "ordered": false
+      }
     }
   ],
   "trains": [
@@ -508,6 +596,18 @@
     {
       "name": "SR",
       "color": "gray"
+    }
+  ],
+  "minorTurns": [
+    {
+      "name": "",
+      "steps": [
+        "May only lay a single yellow tile per OR",
+        "May not buy private companies",
+        "Has one built-in 2T, and may not buy or sell trains",
+        "Splits revenues 50%/50% with owner"
+      ],
+      "ordered": false
     }
   ],
   "turns": [
