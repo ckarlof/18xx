@@ -239,6 +239,7 @@ svg {
 
 .charter--minor .charter__trains {
   height: 1.5625in;
+  bottom: 15px;
 }
 
 .charter__assets {
@@ -306,6 +307,15 @@ svg {
   border-collapse: collapse;
   width: 100%;
 }
+
+.charter--minor .charter__phase {
+  bottom: -15px;
+}
+
+.charter--minor .charter__phase table {
+  font-size: 0.088in;
+}
+
 
 .charter__phase th {
   padding: 0 0.05in;
