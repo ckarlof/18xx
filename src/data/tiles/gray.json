@@ -555,7 +555,6 @@
     ],
     "labels": [
       {
-        "size": 24,
         "label": "M",
         "angle": 205,
         "percent": 0.9
@@ -588,6 +587,140 @@
       },
       {
         "side": 5
+      },
+      {
+        "side": 6
+      }
+    ]
+  },
+  "639R": {
+    "color": "gray",
+    "values": [
+      {
+        "angle": 270,
+        "percent": 0.87,
+        "value": 100
+      }
+    ],
+    "labels": [
+      {
+        "label": "M",
+        "angle": 205,
+        "percent": 0.9
+      }
+    ],
+    "cities": [
+      {
+        "size": 4,
+        "percent": 0.1,
+        "companies": [
+          {
+            "label": "RSR",
+            "color": "white"
+          }
+        ]
+      }
+    ],
+    "track": [
+      {
+        "side": 1
+      },
+      {
+        "side": 2
+      },
+      {
+        "side": 3
+      },
+      {
+        "side": 4
+      },
+      {
+        "side": 5
+      },
+      {
+        "side": 6
+      }
+    ]
+  },
+  "640": {
+    "color": "gray",
+    "rotations": 1,
+    "cities": [
+      {
+        "size": 3,
+        "rotate": 180
+      }
+    ],
+    "labels": [
+      {
+        "label": "Kh",
+        "angle": 208,
+        "percent": 0.85
+      }
+    ],
+    "values": [
+      {
+        "angle": 270,
+        "percent": 0.87,
+        "value": 60
+      }
+    ],
+    "track": [
+      {
+        "side": 1
+      },
+      {
+        "side": 2
+      },
+      {
+        "side": 3
+      },
+      {
+        "side": 4
+      },
+      {
+        "side": 5
+      },
+      {
+        "side": 6
+      }
+    ]
+  },
+  "642": {
+    "color": "gray",
+    "rotations": 1,
+    "cities": [
+      {
+        "size": 3,
+        "rotation": 180,
+        "companies": [
+          {
+            "label": "RSR",
+            "color": "white"
+          }
+        ]
+      }
+    ],
+    "labels": [
+      {
+        "label": "S",
+        "angle": 180,
+        "percent": 0.80
+      }
+    ],
+    "values": [
+      {
+        "angle": 270,
+        "percent": 0.87,
+        "value": 70
+      }
+    ],
+    "track": [
+      {
+        "side": 1
+      },
+      {
+        "side": 2
       },
       {
         "side": 6

@@ -495,6 +495,60 @@
       }
     ]
   },
+  "87": {
+    "color": "green",
+    "centerTowns": [
+      {}
+    ],
+    "values": [
+      {
+        "value": 10,
+        "angle": 270,
+        "percent": 0.5
+      }
+    ],
+    "track": [
+      {
+        "side": 1
+      },
+      {
+        "side": 2
+      },
+      {
+        "side": 3
+      },
+      {
+        "side": 4
+      }
+    ]
+  },
+  "88": {
+    "color": "green",
+    "centerTowns": [
+      {}
+    ],
+    "values": [
+      {
+        "value": 10,
+        "angle": 240,
+        "percent": 0.5
+      }
+    ],
+    "track": [
+      {
+        "side": 1
+      },
+      {
+        "side": 3
+      },
+      {
+        "side": 4
+      },
+      {
+        "side": 6
+      }
+    ]
+  },
   "100": {
     "color": "green",
     "values": [
@@ -1937,6 +1991,62 @@
       {
         "type": "sharp",
         "side": 5
+      }
+    ]
+  },
+  "635": {
+    "color": "green",
+    "rotations": 6,
+    "values": [
+      {
+        "angle": -30,
+        "percent": 0.7,
+        "value": 40
+      }
+    ],
+    "labels": [
+      {
+        "angle": 210,
+        "percent": 0.8,
+        "label": "K"
+      }
+    ],
+    "terrain": [
+      {
+        "angle": 97,
+        "percent": 0.75,
+        "cost": "R40"
+      }
+    ],
+    "cities": [
+      {
+        "angle": 30,
+        "percent": 0.5
+      },
+      {
+        "angle": 150,
+        "percent": 0.5
+      },
+      {
+        "angle": 270,
+        "percent": 0.5
+      }
+    ],
+    "track": [
+      {
+        "type": "sharp",
+        "side": 1,
+        "cross": "over"
+      },
+      {
+        "type": "sharp",
+        "side": 5,
+        "cross": "under"
+      },
+      {
+        "type": "sharp",
+        "side": 3,
+        "cross": "under"
       }
     ]
   },

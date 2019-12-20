@@ -1870,6 +1870,135 @@
       }
     ]
   },
+  "636": {
+    "color": "brown",
+    "rotations": 1,
+    "cities": [
+      {
+        "size": 3,
+        "rotate": 180
+      }
+    ],
+    "labels": [
+      {
+        "label": "K",
+        "angle": 155,
+        "percent": 0.85
+      }
+    ],
+    "values": [
+      {
+        "angle": 270,
+        "percent": 0.87,
+        "value": 50
+      }
+    ],
+    "track": [
+      {
+        "side": 1
+      },
+      {
+        "side": 2
+      },
+      {
+        "side": 3
+      },
+      {
+        "side": 4
+      },
+      {
+        "side": 5
+      },
+      {
+        "side": 6
+      }
+    ]
+  },
+  "638": {
+    "color": "brown",
+    "rotations": 1,
+    "cities": [
+      {
+        "size": 3,
+        "rotate": 180
+      }
+    ],
+    "labels": [
+      {
+        "label": "M",
+        "angle": 155,
+        "percent": 0.85
+      }
+    ],
+    "values": [
+      {
+        "angle": 270,
+        "percent": 0.87,
+        "value": 70
+      }
+    ],
+    "track": [
+      {
+        "side": 1
+      },
+      {
+        "side": 2
+      },
+      {
+        "side": 3
+      },
+      {
+        "side": 4
+      },
+      {
+        "side": 5
+      },
+      {
+        "side": 6
+      }
+    ]
+  },
+  "641": {
+    "color": "brown",
+    "rotations": 1,
+    "cities": [
+      {
+        "size": 3,
+        "rotation": 180,
+        "companies": [
+          {
+            "label": "RSR",
+            "color": "white"
+          }
+        ]
+      }
+    ],
+    "labels": [
+      {
+        "label": "S",
+        "angle": 180,
+        "percent": 0.80
+      }
+    ],
+    "values": [
+      {
+        "angle": 270,
+        "percent": 0.87,
+        "value": 50
+      }
+    ],
+    "track": [
+      {
+        "side": 1
+      },
+      {
+        "side": 2
+      },
+      {
+        "side": 6
+      }
+    ]
+  },
   "646": {
     "color": "brown",
     "rotations": 2,
@@ -3199,8 +3328,8 @@
     "values": [
       {
         "value": 10,
-        "angle": 150,
-        "percent": 0.8
+        "angle": 120,
+        "percent": 0.5
       }
     ],
     "track": [
