@@ -78,18 +78,18 @@
   },
   "124": {
     "color": "gray",
+    "values": [
+      {
+        "angle": 270,
+        "percent": 0.87,
+        "value": 100
+      }
+    ],
     "labels": [
       {
         "label": "T",
-        "angle": 270,
-        "percent": 0.87
-      }
-    ],
-    "values": [
-      {
-        "angle": 210,
-        "percent": 0.87,
-        "value": 100
+        "angle": 205,
+        "percent": 0.96
       }
     ],
     "cities": [
@@ -591,55 +591,6 @@
       }
     ]
   },
-  "639C": {
-    "color": "gray",
-    "values": [
-      {
-        "angle": 270,
-        "percent": 0.87,
-        "value": 100
-      }
-    ],
-    "labels": [
-      {
-        "label": "M",
-        "angle": 205,
-        "percent": 0.9
-      }
-    ],
-    "cities": [
-      {
-        "size": 4,
-        "percent": 0.1,
-        "companies": [
-          {
-            "label": "CN",
-            "color": "white"
-          }
-        ]
-      }
-    ],
-    "track": [
-      {
-        "side": 1
-      },
-      {
-        "side": 2
-      },
-      {
-        "side": 3
-      },
-      {
-        "side": 4
-      },
-      {
-        "side": 5
-      },
-      {
-        "side": 6
-      }
-    ]
-  },
   "639": {
     "color": "gray",
     "values": [
@@ -662,7 +613,7 @@
         "percent": 0.1,
         "companies": [
           {
-            "label": "RSR",
+            "label": "CN",
             "color": "white"
           }
         ]
@@ -1656,7 +1607,6 @@
     ],
     "labels": [
       {
-        "size": 20,
         "label": "O",
         "angle": 205,
         "percent": 0.9

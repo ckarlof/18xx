@@ -4937,8 +4937,8 @@
     "rotations": 6,
     "values": [
       {
-        "angle": -20,
-        "percent": 0.88,
+        "angle": -21,
+        "percent": 0.86,
         "value": 50
       }
     ],
@@ -4986,8 +4986,8 @@
     "rotations": 6,
     "values": [
       {
-        "angle": -20,
-        "percent": 0.88,
+        "angle": -27,
+        "percent": 0.8,
         "value": 50
       }
     ],
@@ -5035,15 +5035,15 @@
     "rotations": 6,
     "values": [
       {
-        "angle": -20,
-        "percent": 0.88,
+        "angle": 85,
+        "percent": 0.8,
         "value": 50
       }
     ],
     "labels": [
       {
-        "angle": 216,
-        "percent": 0.9,
+        "angle": 210,
+        "percent": 0.85,
         "label": "M"
       }
     ],
