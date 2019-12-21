@@ -4986,15 +4986,15 @@
     "rotations": 6,
     "values": [
       {
-        "angle": -27,
-        "percent": 0.8,
+        "angle": 100,
+        "percent": 0.85,
         "value": 50
       }
     ],
     "labels": [
       {
-        "angle": 216,
-        "percent": 0.9,
+        "angle": -27,
+        "percent": 0.8,
         "label": "M"
       }
     ],
@@ -5084,15 +5084,15 @@
     "rotations": 6,
     "values": [
       {
-        "angle": -30,
-        "percent": 0.7,
+        "angle": 32,
+        "percent": 0.65,
         "value": 50
       }
     ],
     "labels": [
       {
-        "angle": 216,
-        "percent": 0.9,
+        "angle": -30,
+        "percent": 0.7,
         "label": "M"
       }
     ],
