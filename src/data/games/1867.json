@@ -325,17 +325,17 @@
     "legend": [
       {
         "color": "offboard",
-        "description": "Minor companies may start here",
+        "description": "Minors may start here",
         "icon": "money-bill-wave"
       },
       {
         "color": "water",
-        "description": "Major companies may start here",
+        "description": "Majors may start here",
         "icon": "money-bill-wave"
       },
       {
         "color": "yellow",
-        "description": "Minor companies may convert here",
+        "description": "Minors may convert here",
         "icon": "certificate"
       }
     ]

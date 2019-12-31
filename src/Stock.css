@@ -1,10 +1,6 @@
 .StockHelpers {
   box-sizing: border-box;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-
-  display: flex;
+  display: block;
   flex-flow: row-reverse nowrap;
   justify-content: flex-start;
   align-items: flex-end;
@@ -60,7 +56,7 @@
 .Legend--Horizontal {
   width: calc(100% - 0.1in);
   margin-right: 0.25in;
-  height: 1in;
+  height: 0.6in;
   position: relative;
 }
 
