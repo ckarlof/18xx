@@ -89,7 +89,6 @@ const Stock = ({cell, paper}) => {
               rounds={game.rounds}
               horizontal={game.stock.type === "2D" ? false : true}
             />
-            
           </div>
           <style>{css}</style>
         </div>

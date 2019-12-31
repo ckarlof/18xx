@@ -56,7 +56,7 @@
 .Legend--Horizontal {
   width: calc(100% - 0.1in);
   margin-right: 0.25in;
-  height: 0.6in;
+  height: 0.5in;
   position: relative;
 }
 
@@ -85,10 +85,17 @@
   position: relative;
 }
 
-.Legend--Horizontal .notes li {
-  width: auto;
-  margin: 0 !important;
+.Legend--Horizontal li {
+  margin: 0.05in 0 0 0 !important;
+  padding-left: 0.35in !important;
+
+  font-size: 0.13in !important;
+
+  padding: 0.025in 0.1in;
+  border-radius: 0.1in;
+  position: relative;
 }
+
 
 .Legend li i {
   position: absolute;

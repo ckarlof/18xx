@@ -258,7 +258,7 @@
       },
       {
         "label": "165",
-        "subLabel": "Max value for minor companies",
+        "subLabel": "Max value for Minor Companies",
         "legend": 2,
         "companies": [
           {
@@ -325,17 +325,17 @@
     "legend": [
       {
         "color": "offboard",
-        "description": "Minors may start here",
+        "description": "Minor Companies may start here",
         "icon": "money-bill-wave"
       },
       {
         "color": "water",
-        "description": "Majors may start here",
+        "description": "Public Companies may start here",
         "icon": "money-bill-wave"
       },
       {
         "color": "yellow",
-        "description": "Minors may convert here",
+        "description": "Minor Companies may convert here",
         "icon": "certificate"
       }
     ]

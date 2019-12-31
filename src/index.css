@@ -807,13 +807,13 @@ svg {
 
 
 .rounds {
-  position: relative;
+  position: static;
   height: 2.75in;
   width: 1in;
 }
 
 .rounds--horizontal {
-  height: 0.6in;
+  height: 0.2in;
   width: 3.1in;
 }
 
@@ -857,7 +857,7 @@ svg {
 }
 
 ul.notes {
-  display: flex;
+  display: block;
   height: 100%;
   margin: 0;
   padding: 0;

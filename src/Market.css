@@ -16,7 +16,7 @@
 
 .MarketCell--SubLabel {
   position: absolute;
-  bottom: 0.9in;
+  bottom: 0.8in;
   left: 0.45in;
   font-size: 0.8em;
   transform: rotate(-90deg);
