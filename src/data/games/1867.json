@@ -65,7 +65,7 @@
     },
     {
       "name": "OR1",
-      "color": "water"
+      "color": "mountain"
     },
     {
       "name": "MR",
@@ -73,7 +73,7 @@
     },
     {
       "name": "OR2",
-      "color": "water"
+      "color": "mountain"
     }
   ],
   "turns": [
@@ -111,33 +111,180 @@
     "type": "1D",
     "par": {
     },
-    "movement": {
-      "left": [
-        "Withheld revenue"
-      ],
-      "right": [
-        "Paid dividends"
-      ]
-    },
     "market": [
       35,
       40,
       45,
-      50,
-      55,
-      60,
-      65,
-      70,
-      80,
-      90,
-      100,
-      110,
-      120,
-      135,
-      150,
-      165,
-      180,
-      200,
+      {
+        "label": "50",
+        "companies": [
+          {
+            "color": "offboard",
+            "row": 8
+          }
+        ]
+      },
+      {
+        "label": "55",
+        "companies": [
+          {
+            "color": "offboard",
+            "row": 8
+          }
+        ]
+      },
+      {
+        "label": "60",
+        "companies": [
+          {
+            "color": "offboard",
+            "row": 8
+          }
+        ]
+      },
+      {
+        "label": "65",
+        "companies": [
+          {
+            "color": "offboard",
+            "row": 8
+          }
+        ]
+      },
+      {
+        "label": "70",
+        "companies": [
+          {
+            "color": "offboard",
+            "row": 8
+          },
+          {
+            "color": "water",
+            "row": 7
+          }
+        ]
+      },
+      {
+        "label": "80",
+        "companies": [
+          {
+            "color": "offboard",
+            "row": 8
+          },
+          {
+            "color": "water",
+            "row": 7
+          }
+        ]
+      },
+      {
+        "label": "90",
+        "companies": [
+          {
+            "color": "offboard",
+            "row": 8
+          },
+          {
+            "color": "water",
+            "row": 7
+          }
+        ]
+      },
+      {
+        "label": "100",
+        "legend": 2,
+        "companies": [
+          {
+            "color": "offboard",
+            "row": 8
+          },
+          {
+            "color": "water",
+            "row": 7
+          }
+        ]
+      },
+      {
+        "label": "110",
+        "legend": 2,
+        "companies": [
+          {
+            "color": "offboard",
+            "row": 8
+          },
+          {
+            "color": "water",
+            "row": 7
+          }
+        ]
+      },
+      {
+        "label": "120",
+        "legend": 2,
+        "companies": [
+          {
+            "color": "offboard",
+            "row": 8
+          },
+          {
+            "color": "water",
+            "row": 7
+          }
+        ]
+      },
+      {
+        "label": "135",
+        "legend": 2,
+        "companies": [
+          {
+            "color": "offboard",
+            "row": 8
+          },
+          {
+            "color": "water",
+            "row": 7
+          }
+        ]
+      },
+      {
+        "label": "150",
+        "legend": 2,
+        "companies": [
+          {
+            "color": "water",
+            "row": 7
+          }
+        ]
+      },
+      {
+        "label": "165",
+        "subLabel": "Max value for minor companies",
+        "legend": 2,
+        "companies": [
+          {
+            "color": "water",
+            "row": 7
+          }
+        ]
+      },
+      {
+        "label": "180",
+        "companies": [
+          {
+            "color": "water",
+            "row": 7
+          }
+        ]
+      },
+      {
+        "label": "200",
+        "companies": [
+          {
+            "color": "water",
+            "row": 7
+          }
+        ]
+      },
       220,
       245,
       270,
@@ -176,6 +323,21 @@
       }
     ],
     "legend": [
+      {
+        "color": "offboard",
+        "description": "Minor companies may start here",
+        "icon": "money-bill-wave"
+      },
+      {
+        "color": "water",
+        "description": "Major companies may start here",
+        "icon": "money-bill-wave"
+      },
+      {
+        "color": "yellow",
+        "description": "Minor companies may convert here",
+        "icon": "certificate"
+      }
     ]
   },
   "trains": [
