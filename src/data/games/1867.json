@@ -1126,7 +1126,9 @@
         "color": "plain",
         "offBoardTrack": [
           {
-            "side": 2
+            "side": 2,
+            "color": "yellow",
+            "borderColor": "black"
           }
         ],
         "cities": [
@@ -1413,7 +1415,9 @@
         "color": "plain",
         "offBoardTrack": [
           {
-            "side": 5
+            "side": 5,
+            "color": "yellow",
+            "borderColor": "black"
           }
         ],
         "centerTowns": [
@@ -1431,7 +1435,9 @@
         "color": "plain",
         "offBoardTrack": [
           {
-            "side": 0
+            "side": 0,
+            "color": "yellow",
+            "borderColor": "black"
           }
         ],
         "bridges": [
